@@ -10,7 +10,7 @@ function CssResources() {
           imgAdress="https://userstyles.org/style_screenshots/180577_after.png"
           title="ColorHunt"
           content="Renk paletleri."
-          target="https://colorhunt.co/"
+          target="https://colorhunt.co/palettes/popular"
         />
         <LinkCard
           imgAdress="https://react-icons-v2.vercel.app/open-graph.png"
