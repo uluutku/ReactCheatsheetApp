@@ -9,7 +9,7 @@ function CssResources() {
         <LinkCard
           imgAdress="https://userstyles.org/style_screenshots/180577_after.png"
           title="ColorHunt"
-          content="Renk seçmek için hazır renk paletleri."
+          content="Renk paletleri."
           target="https://colorhunt.co/"
         />
         <LinkCard
