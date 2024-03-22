@@ -1,0 +1,27 @@
+.code-hint-card-main {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.code-hint-card {
+  color: rgb(232, 232, 232);
+  background-color: #2b333c;
+  padding: 20px;
+  width: 50vw;
+  margin: 20px;
+  border-radius: 12px;
+}
+
+.code-hint-code {
+  white-space: pre-wrap;
+  background-color: #161628;
+  color: #26b9a0;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  overflow-x: auto;
+}
