@@ -1,0 +1,18 @@
+.codebox {
+  margin: 20px;
+  width: 800px;
+  min-height: 400px;
+  background-color: rgb(46, 46, 46);
+  border-radius: 18px;
+  box-shadow: 2px 10px 114px -34px rgba(0, 0, 0, 0.75);
+}
+
+.codebox-text {
+  font-family: "Courier New", Courier, monospace;
+  white-space: pre-wrap;
+  color: #dddede;
+  padding: 15px;
+  font-size: 16px;
+  line-height: 1.4;
+  overflow-x: auto;
+}

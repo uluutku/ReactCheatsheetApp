@@ -1,5 +1,5 @@
 .uxui-card {
-  margin: 20px;
+  margin: 25px;
   border: 1px solid black;
   border-radius: 12px;
   height: 400px;
@@ -8,6 +8,12 @@
   transition: all 0.3s ease;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   text-align: center;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.uxui-card:hover {
+  transform: translateY(-5px) rotate(2deg) scale(1.05);
 }
 
 .card-img {

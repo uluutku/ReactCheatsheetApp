@@ -6,13 +6,15 @@
 }
 
 .uxui-element {
+  justify-content: center;
+  align-items: center;
   margin-top: 20px;
   border-radius: 20px;
   background-color: rgb(88, 88, 88);
   width: 1200px;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .uxui-codebox {
