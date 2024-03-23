@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import CssResources from "./Pages/Links/CssResources";
 import CodeHints from "./Pages/CodeHints/CodeHints";
 import UxUi from "./UXUI/UxUi";
+import UxPalette from "./Pages/UXPalette/UxPalette";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/cssResources" element={<CssResources />} />
         <Route path="/codeHints" element={<CodeHints />} />
         <Route path="/uxui" element={<UxUi />} />
+        <Route path="/uxpalette" element={<UxPalette />} />
       </Routes>
     </>
   );

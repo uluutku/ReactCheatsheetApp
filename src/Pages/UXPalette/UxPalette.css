@@ -1,0 +1,16 @@
+.palette-main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(7, 7, 19);
+  width: 100vw;
+  height: 100vh;
+}

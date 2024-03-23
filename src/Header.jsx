@@ -16,6 +16,9 @@ function Header() {
         <Link className="nav-link" to={"/uxui"}>
           UX UI
         </Link>
+        <Link className="nav-link" to={"/uxpalette"}>
+          UX Palette
+        </Link>
       </div>
     </div>
   );
