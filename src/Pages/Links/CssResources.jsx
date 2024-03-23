@@ -31,10 +31,52 @@ function CssResources() {
           target="https://mui.com/material-ui/material-icons/"
         />
         <LinkCard
+          imgAdress="https://su.ultrasite.com/170_a_6096_23a29920.png"
+          title="Google Fonts"
+          content="Google fonts."
+          target="https://fonts.google.com/"
+        />
+        <LinkCard
           imgAdress="https://www.lavanguardia.com/andro4all/hero/2023/03/chatgpt.jpg"
           title="ChatGPT"
           content="GPT 3.5 & 4"
           target="https://chat.openai.com/"
+        />
+        <LinkCard
+          imgAdress="https://www.spryng.nl/app/uploads/sites/2/2022/05/image.png"
+          title="GetEmoji"
+          content="Copy paste emojis"
+          target="https://getemoji.com/"
+        />
+        <LinkCard
+          imgAdress="https://unsplash.com/blog/content/images/max/2560/1-vQ5EsgnJkANWb5fktHPwnw.jpeg"
+          title="Unsplash"
+          content="Free image resource."
+          target="https://unsplash.com/"
+        />
+        <LinkCard
+          imgAdress="https://mediablog.cdnpk.net/sites/5/2021/12/Flaticon-Rediseno-Logo-Presentacion_Mesa-de-trabajo-1-copia-20.jpg"
+          title="FlatIcon"
+          content="Free icon resource."
+          target="https://www.flaticon.com/"
+        />
+        <LinkCard
+          imgAdress="https://freefrontend.com/assets/img/css-box-shadow-examples/saturated-vs-desaturated-box-shadow.png"
+          title="BoxShadow"
+          content="Free css box shadow generator."
+          target="https://www.cssmatic.com/box-shadow"
+        />
+        <LinkCard
+          imgAdress="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_8ot8XOwPNzaK4yA2Z_7nszRBVJW-Ca35zzcAYP3OFw&s"
+          title="CssGradient.io"
+          content="Free css gradient generator."
+          target="https://cssgradient.io/"
+        />
+        <LinkCard
+          imgAdress="https://i2.wp.com/designshack.net/wp-content/uploads/Briberra-%E2%80%93-Rough-Bold-Script-Font.jpg"
+          title="DesignShack Fonts"
+          content="Free fonts."
+          target="https://designshack.net/resources/fonts/?cost=free"
         />
       </div>
     </div>
