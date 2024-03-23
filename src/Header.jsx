@@ -13,6 +13,9 @@ function Header() {
         <Link className="nav-link" to={"/codeHints"}>
           Code Hints
         </Link>
+        <Link className="nav-link" to={"/uxui"}>
+          UX UI
+        </Link>
       </div>
     </div>
   );
