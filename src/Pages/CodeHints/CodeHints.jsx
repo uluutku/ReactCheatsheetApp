@@ -4,19 +4,48 @@ import "./CodeHints.css";
 
 function CodeHints() {
   const installCommands = `
+  Vite Proje:
   npm create vite@latest
 
+  React-Router-Dom:
   npm install react-router-dom 
 
+  Axios:
   npm install axios
 
+  Material UI:
   npm install @mui/material @emotion/react @emotion/styled
 
+  Material UI Icons:
   npm install @mui/icons-material @mui/material @emotion/styled @emotion/react
 
+  Roboto Font:
   npm install @fontsource/roboto
 
+  React Icons:
   npm install react-icons --save
+
+  JSON Server: (Ayrı bir konsolda)
+  npm install json-server
+
+  //db.json:
+
+  {
+    "posts": [
+      { "id": "1", "title": "a title", "views": 100 },
+      { "id": "2", "title": "another title", "views": 200 }
+    ],
+    "comments": [
+      { "id": "1", "text": "a comment about post 1", "postId": "1" },
+      { "id": "2", "text": "another comment about post 1", "postId": "1" }
+    ],
+    "profile": {
+      "name": "typicode"
+    }
+  }
+
+  npx json-server db.json // json-server --watch db.json
+
   `;
 
   const routerSettingCode = `
@@ -135,6 +164,24 @@ function CodeHints() {
   export default DataFetching;
   `;
 
+  const jsForwardExample = `
+  
+  function LinkCard(props) {
+    const handleButtonClick = () => {
+      window.location.href = props.target || "#";   -----> Şuanki sayfa yönlendirme
+      ///window.open(props.target || "#", "_blank");/// -----> Yeni sekmede açma
+    };
+  
+    return (
+      <div>
+        <button className="card-link-button" onClick={handleButtonClick}>Go!</button>
+      </div>
+    );
+  }
+  
+  export default LinkCard;
+  `;
+
   return (
     <div className="hint-card-container">
       <CodeHintCard
@@ -166,6 +213,11 @@ function CodeHints() {
         title="Axios ile Veri Çekme Örneği"
         exp="Axios kütüphanesi kullanarak veri çekme örneği."
         code={axiosFetchCode}
+      />
+      <CodeHintCard
+        title="Javascript ile yönlendirme"
+        exp="Js te onclick eventiyle tetiklenecek fonksiyon, props olarak adresi dışarıdan da alabilir."
+        code={jsForwardExample}
       />
     </div>
   );
