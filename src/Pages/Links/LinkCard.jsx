@@ -3,7 +3,8 @@ import "./LinkCard.css";
 
 function LinkCard(props) {
   const handleButtonClick = () => {
-    window.location.href = props.target || "#";
+    //window.location.href = props.target || "#";
+    window.open(props.target || "#", "_blank");
   };
 
   return (
