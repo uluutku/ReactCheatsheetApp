@@ -13,6 +13,12 @@ function CssResources() {
           target="https://colorhunt.co/palettes/popular"
         />
         <LinkCard
+          imgAdress="https://inceleme.co/wp-content/uploads/2020/09/Yandex.jpg"
+          title="Yandex Search"
+          content="Pre selected PNG tag."
+          target="https://yandex.com/images/search?text=logo&itype=png"
+        />
+        <LinkCard
           imgAdress="https://react-icons-v2.vercel.app/open-graph.png"
           title="React Icons"
           content="İkonlar."
