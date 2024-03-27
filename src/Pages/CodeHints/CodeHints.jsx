@@ -182,6 +182,51 @@ function CodeHints() {
   export default LinkCard;
   `;
 
+  const componentWithMap = `
+  
+  savedNotes = [], --> Verileri tutan array.
+
+  {savedNotes.map((note) => (
+    <FlashCard ----> Her biri için çağırılacak component
+      key={note.id}
+      title={note.title}
+      context={note.context}
+    />
+  ))}
+  `;
+
+  const basicAddToArray = `
+  //Gönderen
+
+  const handleSubmit = () => {
+    const newNote = {
+      id: Math.random() * 1000,
+      title: title,
+      context: context,
+    };
+
+    props.onSave(newNote);
+  };
+
+  // Alan
+  <Form onSave={handleSave} />
+  //
+
+  const [savedNotes, setSavedNotes] = useState([]);
+
+  const handleSave = (yeniNot) => {
+    setSavedNotes([...savedNotes, yeniNot]);
+  };
+
+  //Filter (delete) function:
+  
+  const deleteNote = (id) => {
+    const updatedNotes = savedNotes.filter((note) => note.id !== id);
+    setSavedNotes(updatedNotes);
+  };
+
+  `;
+
   return (
     <div className="hint-card-container">
       <CodeHintCard
@@ -218,6 +263,11 @@ function CodeHints() {
         title="Javascript ile yönlendirme"
         exp="Js te onclick eventiyle tetiklenecek fonksiyon, props olarak adresi dışarıdan da alabilir."
         code={jsForwardExample}
+      />
+      <CodeHintCard
+        title="Array Map ile Render"
+        exp="Bir arrayın tüm elemanlarını gezip her elemanın bilgilierini props olarak gönderen kod."
+        code={componentWithMap}
       />
     </div>
   );
