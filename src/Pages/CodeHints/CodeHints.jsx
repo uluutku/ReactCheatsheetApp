@@ -89,170 +89,146 @@ function CodeHints() {
   const arrayMethodsCode = `
   // JavaScript Array Metodları
 
-  // Arrow function ➡️
-const numbers = [1, 2, 3, 4, 5];
-const squaredNumbers = numbers.map(num => num * num);
-console.log(squaredNumbers); // Output: [1, 4, 9, 16, 25]
+  // Arrow function
+const addOne = (x) => x + 1;
+console.log(addOne(5)); // Output: 6
 
-// forEach 🔄
-const colors = ['red', 'green', 'blue'];
-colors.forEach(color => console.log(color));
+// forEach
+const fruits = ["🍎", "🍌", "🍊"];
+fruits.forEach(fruit => console.log(fruit)); // Output: 🍎 🍌 🍊
 
-// map 🗺️
-const numbers = [1, 2, 3, 4, 5];
-const doubledNumbers = numbers.map(num => num * 2);
-console.log(doubledNumbers); // Output: [2, 4, 6, 8, 10]
+// map
+const doubledNumbers = [1, 2, 3].map(num => num * 2);
+console.log(doubledNumbers); // Output: [2, 4, 6]
 
-// filter 🕵️‍♂️
-const numbers = [1, 2, 3, 4, 5];
-const evenNumbers = numbers.filter(num => num % 2 === 0);
+// filter
+const evenNumbers = [1, 2, 3, 4, 5].filter(num => num % 2 === 0);
 console.log(evenNumbers); // Output: [2, 4]
 
-// concat ➕
-const arr1 = [1, 2, 3];
-const arr2 = [4, 5, 6];
-const combinedArray = arr1.concat(arr2);
-console.log(combinedArray); // Output: [1, 2, 3, 4, 5, 6]
+// concat
+const vegetables = ["🥦", "🥕"];
+const food = fruits.concat(vegetables);
+console.log(food); // Output: ["🍎", "🍌", "🍊", "🥦", "🥕"]
 
-// find 🔍
-const numbers = [1, 2, 3, 4, 5];
-const foundNumber = numbers.find(num => num > 3);
-console.log(foundNumber); // Output: 4
+// find
+const foundFruit = fruits.find(fruit => fruit === "🍌");
+console.log(foundFruit); // Output: 🍌
 
-// findIndex 🔍
-const numbers = [1, 2, 3, 4, 5];
-const foundIndex = numbers.findIndex(num => num > 3);
-console.log(foundIndex); // Output: 3
+// findIndex
+const indexOfBanana = fruits.findIndex(fruit => fruit === "🍌");
+console.log(indexOfBanana); // Output: 1
 
-// indexOf 🔄
-const numbers = [1, 2, 3, 4, 5];
-const index = numbers.indexOf(3);
-console.log(index); // Output: 2
+// indexOf
+const indexOfOrange = fruits.indexOf("🍊");
+console.log(indexOfOrange); // Output: 2
 
-// lastIndexOf 🔄
-const numbers = [1, 2, 3, 4, 3, 5];
-const lastIndex = numbers.lastIndexOf(3);
-console.log(lastIndex); // Output: 4
+// lastIndexOf
+const lastIndexOfApple = fruits.lastIndexOf("🍎");
+console.log(lastIndexOfApple); // Output: 0
 
-// some 🔍
-const numbers = [1, 2, 3, 4, 5];
-const hasEven = numbers.some(num => num % 2 === 0);
-console.log(hasEven); // Output: true
+// some
+const hasBanana = fruits.some(fruit => fruit === "🍌");
+console.log(hasBanana); // Output: true
 
-// every ✔️
-const numbers = [2, 4, 6, 8, 10];
-const allEven = numbers.every(num => num % 2 === 0);
-console.log(allEven); // Output: true
+// every
+const allAreFruits = fruits.every(fruit => typeof fruit === 'string');
+console.log(allAreFruits); // Output: true
 
-// includes 🔍
-const numbers = [1, 2, 3, 4, 5];
-const includesThree = numbers.includes(3);
-console.log(includesThree); // Output: true
+// includes
+const includesApple = fruits.includes("🍎");
+console.log(includesApple); // Output: true
 
-// push ➡️
-const fruits = ['apple', 'banana'];
-fruits.push('orange');
-console.log(fruits); // Output: ['apple', 'banana', 'orange']
+// push
+fruits.push("🍇");
+console.log(fruits); // Output: ["🍎", "🍌", "🍊", "🍇"]
 
-// unshift ⬅️
-const fruits = ['apple', 'banana'];
-fruits.unshift('orange');
-console.log(fruits); // Output: ['orange', 'apple', 'banana']
+// unshift
+fruits.unshift("🍉");
+console.log(fruits); // Output: ["🍉", "🍎", "🍌", "🍊", "🍇"]
 
-// pop ⬅️
-const fruits = ['apple', 'banana', 'orange'];
+// pop
 const poppedFruit = fruits.pop();
-console.log(poppedFruit); // Output: 'orange'
+console.log(poppedFruit); // Output: 🍇
 
-// shift ➡️
-const fruits = ['apple', 'banana', 'orange'];
+// shift
 const shiftedFruit = fruits.shift();
-console.log(shiftedFruit); // Output: 'apple'
+console.log(shiftedFruit); // Output: 🍉
 
-// toString 🔄
-const numbers = [1, 2, 3];
-const string = numbers.toString();
-console.log(string); // Output: '1,2,3'
+// toString
+const fruitsString = fruits.toString();
+console.log(fruitsString); // Output: 🍎,🍌,🍊
 
-// join 🔄
-const elements = ['Fire', 'Air', 'Water'];
-console.log(elements.join('-')); // Output: 'Fire-Air-Water'
+// join
+const joinedFruits = fruits.join(' - ');
+console.log(joinedFruits); // Output: 🍎 - 🍌 - 🍊
 
-// fill 🎨
-const array = [1, 2, 3, 4, 5];
-array.fill(0, 2, 4);
-console.log(array); // Output: [1, 2, 0, 0, 5]
+// fill
+const filledArray = new Array(3).fill("🍋");
+console.log(filledArray); // Output: ["🍋", "🍋", "🍋"]
 
-// copyWithin 📝
-const array = [1, 2, 3, 4, 5];
-array.copyWithin(0, 3, 4);
-console.log(array); // Output: [4, 2, 3, 4, 5]
+// copyWithin
+const copiedFruits = fruits.copyWithin(1, 0);
+console.log(copiedFruits); // Output: ["🍎", "🍎", "🍌", "🍊"]
 
-// slice 🍰
-const fruits = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango'];
-const citrus = fruits.slice(1, 3);
-console.log(citrus); // Output: ['Orange', 'Lemon']
+// slice
+const slicedFruits = fruits.slice(1, 3);
+console.log(slicedFruits); // Output: ["🍎", "🍌"]
 
-// splice 🎣
-const months = ['Jan', 'March', 'April', 'June'];
-months.splice(1, 0, 'Feb');
-console.log(months); // Output: ['Jan', 'Feb', 'March', 'April', 'June']
+// splice
+const removedFruits = fruits.splice(1, 2);
+console.log(removedFruits); // Output: ["🍎", "🍌"]
 
-// sort 🔢
-const months = ['March', 'Jan', 'Feb', 'Dec'];
-months.sort();
-console.log(months); // Output: ['Dec', 'Feb', 'Jan', 'March']
+// sort
+fruits.sort();
+console.log(fruits); // Output: ["🍊", "🍎"]
 
-// reverse ↩️
-const array = [1, 2, 3, 4, 5];
-array.reverse();
-console.log(array); // Output: [5, 4, 3, 2, 1]
+// reverse
+fruits.reverse();
+console.log(fruits); // Output: ["🍎", "🍊"]
 
-// from 🔄
-const str = 'hello';
-const chars = Array.from(str);
-console.log(chars); // Output: ['h', 'e', 'l', 'l', 'o']
+// from
+const arrayFromFruits = Array.from(fruits);
+console.log(arrayFromFruits); // Output: ["🍎", "🍊"]
 
-// isArray 🔄
-console.log(Array.isArray([])); // Output: true
-console.log(Array.isArray({})); // Output: false
+// isArray
+const isArrayFruits = Array.isArray(fruits);
+console.log(isArrayFruits); // Output: true
 
-// valueOf 🔄
-const array = [1, 2, 3];
-console.log(array.valueOf()); // Output: [1, 2, 3]
+// valueOf
+const fruitsValue = fruits.valueOf();
+console.log(fruitsValue); // Output: ["🍎", "🍊"]
 
-// entries 🚪
-const array = ['a', 'b', 'c'];
-const iterator = array.entries();
-console.log(iterator.next().value); // Output: [0, 'a']
+// entries
+const fruitEntries = fruits.entries();
+console.log(Array.from(fruitEntries)); // Output: [[0, "🍎"], [1, "🍊"]]
 
-// keys 🔑
-const array = ['a', 'b', 'c'];
-const iterator = array.keys();
-console.log(iterator.next().value); // Output: 0
+// keys
+const fruitKeys = fruits.keys();
+console.log(Array.from(fruitKeys)); // Output: [0, 1]
 
-// values 🎱
-const array = ['a', 'b', 'c'];
-const iterator = array.values();
-console.log(iterator.next().value); // Output: 'a'
+// values
+const fruitValues = fruits.values();
+console.log(Array.from(fruitValues)); // Output: ["🍎", "🍊"]
 
-// reduce ➗
-const array = [1, 2, 3, 4];
-const reducer = (accumulator, currentValue) => accumulator + currentValue;
-console.log(array.reduce(reducer)); // Output: 10
+// reduce
+const sum = [1, 2, 3, 4].reduce((acc, curr) => acc + curr, 0);
+console.log(sum); // Output: 10
 
-// reduceRight ➗
-const array = [1, 2, 3, 4];
-const reducer = (accumulator, currentValue) => accumulator + currentValue;
-console.log(array.reduceRight(reducer)); // Output: 10
+// reduceRight
+const reversedSum = [1, 2, 3, 4].reduceRight((acc, curr) => acc + curr, 0);
+console.log(reversedSum); // Output: 10
 
-// flat ⬇️
-const nestedArray = [1, [2, 3], [4, 5]];
-console.log(nestedArray.flat()); // Output: [1, 2, 3, 4, 5]
+// flat
+const nestedArray = [[1, 2], [3, 4]];
+const flattenedArray = nestedArray.flat();
+console.log(flattenedArray); // Output: [1, 2, 3, 4]
 
-// flatMap ⬇️🗺️
-const arr = [1, 2, 3];
-console.log(arr.flatMap(x => [x * 2])); // Output: [2, 4, 6]
+// flatMap
+const flattenedMappedArray = [1, 2, 3].flatMap(x => [x, x]);
+console.log(flattenedMappedArray); // Output: [1, 1, 2, 2, 3, 3]
+
+console.log(fruits); // Output: ["🍎", "🍊"]
+
 
   `;
 
@@ -330,35 +306,111 @@ console.log(arr.flatMap(x => [x * 2])); // Output: [2, 4, 6]
   ))}
   `;
 
-  const basicAddToArray = `
-  //Gönderen
+  const reactHooks = `
+  import React, { useState, useEffect, useContext, useReducer, useCallback, useMemo, useRef } from 'react';
+import { useParams } from 'react-router-dom';
 
-  const handleSubmit = () => {
-    const newNote = {
-      id: Math.random() * 1000,
-      title: title,
-      context: context,
-    };
+// useState: Component'in state'ini tanımlamak için kullanılır.
+const Counter = () => {
+  const [count, setCount] = useState(0); // Başlangıç değeri 0 olan bir state tanımla
 
-    props.onSave(newNote);
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>Increase</button>
+    </div>
+  );
+};
+
+// useEffect: Component'in mount, update veya unmount zamanlarında side effect'ler çalıştırmak için kullanılır.
+const DataFetcher = () => {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    // Burada API'den veri alınıp, setState fonksiyonuyla state güncellenir
+    fetchData().then((result) => setData(result));
+  }, []); // Boş bağımlılık dizisi: Component mount olduğunda sadece bir kere çalışır
+
+  return <div>{data ? <p>Data: {data}</p> : <p>Loading...</p>}</div>;
+};
+
+// useContext: Context içerisindeki değerlere erişmek için kullanılır.
+const ThemeContext = React.createContext('light');
+
+const ThemedComponent = () => {
+  const theme = useContext(ThemeContext);
+
+  return <div>Current Theme: {theme}</div>;
+};
+
+// useReducer: useState'in daha karmaşık versiyonudur ve state management için kullanılır.
+const initialState = { count: 0 };
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case 'increment':
+      return { count: state.count + 1 };
+    case 'decrement':
+      return { count: state.count - 1 };
+    default:
+      throw new Error();
+  }
+};
+
+const CounterWithReducer = () => {
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  return (
+    <div>
+      Count: {state.count}
+      <button onClick={() => dispatch({ type: 'increment' })}>Increase</button>
+      <button onClick={() => dispatch({ type: 'decrement' })}>Decrease</button>
+    </div>
+  );
+};
+
+// useCallback: Callback fonksiyonlarını optimize etmek için kullanılır.
+const MemoizedComponent = () => {
+  const memoizedCallback = useCallback(() => {
+    // Buraya callback fonksiyonunun işlemleri gelebilir
+  }, []); // Boş bağımlılık dizisi: Fonksiyon sadece bir kere oluşturulur ve sonraki render'larında tekrar oluşturulmaz
+
+  return <button onClick={memoizedCallback}>Memoized Button</button>;
+};
+
+// useMemo: Değerlerin tekrar hesaplanmasını önlemek için kullanılır.
+const MemoizedValueComponent = () => {
+  const expensiveValue = useMemo(() => {
+    // Burada maliyetli bir işlem yapılır, örneğin hesaplama vs.
+    return calculateExpensiveValue();
+  }, []); // Boş bağımlılık dizisi: Değer sadece bir kere hesaplanır ve sonraki render'larında tekrar hesaplanmaz
+
+  return <div>Expensive Value: {expensiveValue}</div>;
+};
+
+// useRef: Component'in render sırasında oluşturulan bir değeri hatırlaması için kullanılır.
+const RefComponent = () => {
+  const inputRef = useRef(null);
+
+  const focusInput = () => {
+    inputRef.current.focus();
   };
 
-  // Alan
-  <Form onSave={handleSave} />
-  //
+  return (
+    <div>
+      <input ref={inputRef} type="text" />
+      <button onClick={focusInput}>Focus Input</button>
+    </div>
+  );
+};
 
-  const [savedNotes, setSavedNotes] = useState([]);
+// useParams: React Router tarafından verilen dinamik URL parametrelerine erişmek için kullanılır.
+const Profile = () => {
+  const { username } = useParams();
 
-  const handleSave = (yeniNot) => {
-    setSavedNotes([...savedNotes, yeniNot]);
-  };
+  return <div>User Profile: {username}</div>;
+};
 
-  //Filter (delete) function:
-  
-  const deleteNote = (id) => {
-    const updatedNotes = savedNotes.filter((note) => note.id !== id);
-    setSavedNotes(updatedNotes);
-  };
 
   `;
 
@@ -403,6 +455,11 @@ console.log(arr.flatMap(x => [x * 2])); // Output: [2, 4, 6]
         title="Array Map ile Render"
         exp="Bir arrayın tüm elemanlarını gezip her elemanın bilgilierini props olarak gönderen kod."
         code={componentWithMap}
+      />
+      <CodeHintCard
+        title="React Hooks"
+        exp="Temel react hooklarının syntaxleri."
+        code={reactHooks}
       />
     </div>
   );
