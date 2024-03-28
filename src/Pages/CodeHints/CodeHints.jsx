@@ -89,36 +89,171 @@ function CodeHints() {
   const arrayMethodsCode = `
   // JavaScript Array Metodları
 
-  // 1. push(): Dizinin sonuna bir veya daha fazla öğe ekler ve dizinin yeni uzunluğunu döndürür.
-  const array = [1, 2, 3];
-  array.push(4); // [1, 2, 3, 4]
+  // Arrow function ➡️
+const numbers = [1, 2, 3, 4, 5];
+const squaredNumbers = numbers.map(num => num * num);
+console.log(squaredNumbers); // Output: [1, 4, 9, 16, 25]
 
-  // 2. pop(): Dizinin sonundaki öğeyi kaldırır ve kaldırılan öğeyi döndürür.
-  const lastElement = array.pop(); // 4, array: [1, 2, 3]
+// forEach 🔄
+const colors = ['red', 'green', 'blue'];
+colors.forEach(color => console.log(color));
 
-  // 3. shift(): Dizinin başındaki öğeyi kaldırır ve kaldırılan öğeyi döndürür.
-  const firstElement = array.shift(); // 1, array: [2, 3]
+// map 🗺️
+const numbers = [1, 2, 3, 4, 5];
+const doubledNumbers = numbers.map(num => num * 2);
+console.log(doubledNumbers); // Output: [2, 4, 6, 8, 10]
 
-  // 4. unshift(): Dizinin başına bir veya daha fazla öğe ekler ve dizinin yeni uzunluğunu döndürür.
-  array.unshift(0); // array: [0, 2, 3]
+// filter 🕵️‍♂️
+const numbers = [1, 2, 3, 4, 5];
+const evenNumbers = numbers.filter(num => num % 2 === 0);
+console.log(evenNumbers); // Output: [2, 4]
 
-  // 5. splice(): Dizi içindeki bir veya daha fazla öğeyi kaldırır, değiştirir veya ekler.
-  array.splice(1, 0, 1.5); // array: [0, 1.5, 2, 3]
+// concat ➕
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+const combinedArray = arr1.concat(arr2);
+console.log(combinedArray); // Output: [1, 2, 3, 4, 5, 6]
 
-  // 6. slice(): Belirtilen bir başlangıç ve bitiş dizinleri arasındaki öğeleri kopyalar.
-  const slicedArray = array.slice(1, 3); // slicedArray: [1.5, 2]
+// find 🔍
+const numbers = [1, 2, 3, 4, 5];
+const foundNumber = numbers.find(num => num > 3);
+console.log(foundNumber); // Output: 4
 
-  // 7. forEach(): Dizi öğeleri üzerinde bir döngü çalıştırır.
-  array.forEach(item => console.log(item)); // 0, 1.5, 2, 3
+// findIndex 🔍
+const numbers = [1, 2, 3, 4, 5];
+const foundIndex = numbers.findIndex(num => num > 3);
+console.log(foundIndex); // Output: 3
 
-  // 8. map(): Dizi öğeleri üzerinde bir dönüşüm uygular ve yeni bir dizi döndürür.
-  const mappedArray = array.map(item => item * 2); // mappedArray: [0, 3, 4, 6]
+// indexOf 🔄
+const numbers = [1, 2, 3, 4, 5];
+const index = numbers.indexOf(3);
+console.log(index); // Output: 2
 
-  // 9. filter(): Belirli bir koşulu karşılayan öğelerden oluşan bir dizi döndürür.
-  const filteredArray = array.filter(item => item > 1); // filteredArray: [1.5, 2, 3]
+// lastIndexOf 🔄
+const numbers = [1, 2, 3, 4, 3, 5];
+const lastIndex = numbers.lastIndexOf(3);
+console.log(lastIndex); // Output: 4
 
-  // 10. reduce(): Dizi öğeleri üzerinde bir işlem uygular ve bir değer döndürür.
-  const reducedValue = array.reduce((acc, curr) => acc + curr, 0); // reducedValue: 6
+// some 🔍
+const numbers = [1, 2, 3, 4, 5];
+const hasEven = numbers.some(num => num % 2 === 0);
+console.log(hasEven); // Output: true
+
+// every ✔️
+const numbers = [2, 4, 6, 8, 10];
+const allEven = numbers.every(num => num % 2 === 0);
+console.log(allEven); // Output: true
+
+// includes 🔍
+const numbers = [1, 2, 3, 4, 5];
+const includesThree = numbers.includes(3);
+console.log(includesThree); // Output: true
+
+// push ➡️
+const fruits = ['apple', 'banana'];
+fruits.push('orange');
+console.log(fruits); // Output: ['apple', 'banana', 'orange']
+
+// unshift ⬅️
+const fruits = ['apple', 'banana'];
+fruits.unshift('orange');
+console.log(fruits); // Output: ['orange', 'apple', 'banana']
+
+// pop ⬅️
+const fruits = ['apple', 'banana', 'orange'];
+const poppedFruit = fruits.pop();
+console.log(poppedFruit); // Output: 'orange'
+
+// shift ➡️
+const fruits = ['apple', 'banana', 'orange'];
+const shiftedFruit = fruits.shift();
+console.log(shiftedFruit); // Output: 'apple'
+
+// toString 🔄
+const numbers = [1, 2, 3];
+const string = numbers.toString();
+console.log(string); // Output: '1,2,3'
+
+// join 🔄
+const elements = ['Fire', 'Air', 'Water'];
+console.log(elements.join('-')); // Output: 'Fire-Air-Water'
+
+// fill 🎨
+const array = [1, 2, 3, 4, 5];
+array.fill(0, 2, 4);
+console.log(array); // Output: [1, 2, 0, 0, 5]
+
+// copyWithin 📝
+const array = [1, 2, 3, 4, 5];
+array.copyWithin(0, 3, 4);
+console.log(array); // Output: [4, 2, 3, 4, 5]
+
+// slice 🍰
+const fruits = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango'];
+const citrus = fruits.slice(1, 3);
+console.log(citrus); // Output: ['Orange', 'Lemon']
+
+// splice 🎣
+const months = ['Jan', 'March', 'April', 'June'];
+months.splice(1, 0, 'Feb');
+console.log(months); // Output: ['Jan', 'Feb', 'March', 'April', 'June']
+
+// sort 🔢
+const months = ['March', 'Jan', 'Feb', 'Dec'];
+months.sort();
+console.log(months); // Output: ['Dec', 'Feb', 'Jan', 'March']
+
+// reverse ↩️
+const array = [1, 2, 3, 4, 5];
+array.reverse();
+console.log(array); // Output: [5, 4, 3, 2, 1]
+
+// from 🔄
+const str = 'hello';
+const chars = Array.from(str);
+console.log(chars); // Output: ['h', 'e', 'l', 'l', 'o']
+
+// isArray 🔄
+console.log(Array.isArray([])); // Output: true
+console.log(Array.isArray({})); // Output: false
+
+// valueOf 🔄
+const array = [1, 2, 3];
+console.log(array.valueOf()); // Output: [1, 2, 3]
+
+// entries 🚪
+const array = ['a', 'b', 'c'];
+const iterator = array.entries();
+console.log(iterator.next().value); // Output: [0, 'a']
+
+// keys 🔑
+const array = ['a', 'b', 'c'];
+const iterator = array.keys();
+console.log(iterator.next().value); // Output: 0
+
+// values 🎱
+const array = ['a', 'b', 'c'];
+const iterator = array.values();
+console.log(iterator.next().value); // Output: 'a'
+
+// reduce ➗
+const array = [1, 2, 3, 4];
+const reducer = (accumulator, currentValue) => accumulator + currentValue;
+console.log(array.reduce(reducer)); // Output: 10
+
+// reduceRight ➗
+const array = [1, 2, 3, 4];
+const reducer = (accumulator, currentValue) => accumulator + currentValue;
+console.log(array.reduceRight(reducer)); // Output: 10
+
+// flat ⬇️
+const nestedArray = [1, [2, 3], [4, 5]];
+console.log(nestedArray.flat()); // Output: [1, 2, 3, 4, 5]
+
+// flatMap ⬇️🗺️
+const arr = [1, 2, 3];
+console.log(arr.flatMap(x => [x * 2])); // Output: [2, 4, 6]
+
   `;
 
   const axiosFetchCode = `
