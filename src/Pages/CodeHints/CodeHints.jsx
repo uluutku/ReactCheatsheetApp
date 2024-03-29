@@ -86,6 +86,40 @@ function CodeHints() {
   </Link>
   `;
 
+  const downToTopProps = `
+  // ParentComponent.jsx
+import React, { useState } from 'react';
+import ChildComponent from './ChildComponent';
+
+function ParentComponent() {
+  const [message, setMessage] = useState("");
+
+  const handleMessageFromChild = (newMessage) => {
+    setMessage(newMessage);
+  };
+
+  return (
+    <div>
+      <ChildComponent onMessage={handleMessageFromChild} />
+      <p>{message}</p>
+    </div>
+  );
+}
+
+// ChildComponent.jsx
+import React from 'react';
+
+function ChildComponent(props) {
+  const sendMessageToParent = () => {
+    props.onMessage("Merhaba, Parent!");
+  };
+
+  return <button onClick={sendMessageToParent}>Parent'e Mesaj Gönder</button>;
+}
+
+export default ChildComponent;
+  `;
+
   const arrayMethodsCode = `
   // JavaScript Array Metodları
 
@@ -460,6 +494,11 @@ const Profile = () => {
         title="React Hooks"
         exp="Temel react hooklarının syntaxleri."
         code={reactHooks}
+      />
+      <CodeHintCard
+        title="Aşağıdan yukarı props geçme"
+        exp="Aşağıdan yukarı function yardımıyla props geçme."
+        code={downToTopProps}
       />
     </div>
   );
